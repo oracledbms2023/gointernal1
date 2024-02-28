@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<pre id="textToCopy1">
+class Student:
+    def __init__(self):
+        self.marks = []
+
+    def set_data(self, r, n, m1, m2, m3):
+        self.rollno = r
+        self.name = n
+        self.marks.append(m1)
+        self.marks.append(m2)
+        self.marks.append(m3)
+
+    def total(self):
+        return sum(self.marks)
+
+    def display_data(self):
+        print("Student Details")
+        print("Roll no : ", self.rollno)
+        print("Name : ", self.name)
+        print("Marks : ", self.total())
+        print("********************")
+
+
+r = int(input("Enter the rollno : "))
+n = input("Enter the name : ")
+print("********************")
+m1 = int(input("Enter the marks in sub1 : "))
+m2 = int(input("Enter the marks in sub2 : "))
+m3 = int(input("Enter the marks in sub3 : "))
+
+student_obj = Student()
+student_obj.set_data(r, n, m1, m2, m3)
+student_obj.display_data()
+     
+               
+</pre>
+
+<h4>lab 2</h4>
+<pre id="textToCopy2">
+class Student:
+    def __init__(self, name, rollno, course, year):
+        self.name = name
+        self.rollno = rollno
+        self.course = Course(course, year)
+
+    def show(self):
+        print(self.name, self.rollno)
+        print(self.course.get())
+
+class Course:
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
+
+    def get(self):
+        return (self.name, self.year)
+
+class Department:
+    def __init__(self, name):
+        self.name = name
+        self.courses = []
+
+    def get(self):
+        return (self.name, self.courses)
+
+    def add_courses(self, name):
+        self.courses.append(name)
+
+    def show_courses(self):
+        print("Courses of this department are given: ", self.courses)
+
+# Creating departments and adding courses
+D1 = Department("BVOC")
+D2 = Department("Commerce")
+
+D1.add_courses("ASD")
+D1.add_courses("RSCM")
+D1.add_courses("DMFM")
+
+D2.add_courses("HUMAN RESOURCES")
+D2.add_courses("Marketing")
+D2.add_courses("Material Management")
+
+D1.show_courses()
+D2.show_courses()
+
+print("The List of the courses for the respective Department are given below: Choose the course of your wish")
+S = Student("Keerthana V.D. Nayak", 201315, "ASD", 2020)
+S.show()
+              
+</pre>
+
+<h4>lab 3</h4>
+<pre id="textToCopy3">
+#a]
+a = int(input("Please Enter the number 1: "))
+b = int(input("Please Enter the number 2: "))
+
+try:
+    c = a / b
+    print("a/b = %d" % c)
+except ZeroDivisionError:
+    print("You can't divide by zero")
+else:
+    print(c)
+
+#b]
+try:
+    num = int(input("Enter the number: "))
+    if num less 0:
+        raise ValueError
+except ValueError:
+    print("Negative integers are not accepted. Please enter a positive integer.")
+else:
+    print(num)
+
+   
+        
+</pre>
+
+<h4>lab 4</h4>
+<pre id="textToCopy4">
+#1]
+import numpy as np
+x = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+print("Original array:")
+print(x)
+print(" ")
+print("Sum of all elements:")
+print(np.sum(x))
+print(" ")
+print("Sum of each column:")
+print(np.sum(x, axis=0))
+print(" ")
+print("Sum of each row:")
+print(np.sum(x, axis=1))
+
+#2] a]
+print("Array of floating point : \n")
+print(np.ones((3, 5)))
+#2] b]
+array = np.random.randint(10, size=(3, 3))
+print("Array of random integers :\n ")
+print(array)
+
+#2] c]
+import numpy as np
+x=np.array([1,2,3,4,5,6,7,8,9,10])
+print("Original array: ")
+print(x)
+print(" ")
+#i)Positive and negative indexing on the array
+print("Access element by Positive index :")
+print(x[0])
+print(" ")
+print("Access element by Negative index :")
+print(x[-1])
+print(" ")
+#ii)middle subarray of the original array
+print("Middle subarray of the original array:")
+print(x[4:8])
+print(" ")
+#iii)every other element, starting at index 1
+print("Access every other elements : ")
+print(x[1::2] )
+
+#2] d]
+#i)one-dimensions array
+array = np.array([ 2, 4, 6, 8, 10, 12])
+print("One-dimensions array:")
+print(array)
+#ii)two-dimensions array
+newarray= np.array([[ 2, 4],[ 6, 8], [10, 12]])
+print("Two-dimensions array:")
+print(newarray)
+#iii)three -dimensions array
+array_3= np.array([[[0,1,2],[3,4,5]],[[6,7,8],[9,10,11]]])
+print("Three-dimensions array:")
+print(array_3)
+
+#2] e]
+x=np.array([1,2,3])
+y=np.array([3,2,1])
+z=np.array([7,8,9])
+print("concatenate:")
+print(np.concatenate([x, y]))
+print(" ")
+print("vstack: ")
+print(np.vstack([x, z, y]))
+print(" ")
+print("hstack: ")
+print(np.hstack([x,y]))
+
+#2] f]
+import numpy as np
+a = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+b = a.reshape(3,4)
+print("Array of shape 3*4 is :")
+print(b)
+print(" ")
+c = b[::2]
+print("Access multiple array element at once :")
+print(c)
+     
+</pre>
+
+<h4>lab 5</h4>
+<pre id="textToCopy5">
+#create dataframe Sales
+import pandas as pd
+inr2014=[700,2100,1300,878,987]
+inr2015=[700,2100,1310,878,978]
+inr2016=[5000,2100,1350,878,977]
+inr2017=[700,2150,1370,878,987]
+label = ['Kokila','Punith','Rama','Shama','Bahma']
+dic={'2014':inr2014,'2015':inr2015,'2016':inr2016,'2017':inr2017}
+Sales=pd.DataFrame(dic,index=label)
+print(Sales)
+#create dataframe Sales2
+inr2018=[160000,110000,500000,340000,900000]
+label=['Kokila','Punith','Rama','Shama','Bahma']
+dic={'2018':inr2018}
+Sales2=pd.DataFrame(dic,index=label)
+print(Sales2)
+#1]
+Index(['Kokila', 'Punith', 'Rama', 'Shama', 'Bahma'], dtype='object')
+#2]
+print(Sales.columns)
+#3]
+print(Sales.dtypes) 
+#4]
+print(Sales.ndim)
+print(Sales.shape)
+print(Sales.size)
+print(Sales.values)
+#5] a]
+print(Sales.tail(2)) 
+#5] b]
+print(Sales.head(2))
+#6]
+print(Sales[['2014','2015']])
+#7] 
+print(Sales.empty)
+#8]
+print(Sales.T.append(Sales2.T).T)
+#9] 
+print(Sales.T)
+print(Sales)
+#10]
+print(Sales['2017'])
+#11] 
+print(Sales['2016']['Bahma'])
+print(Sales)
+#12]
+del Sales['2014']
+print(Sales)
+#13] 
+Sales.rename({'Punith':'Rajkumar','Rama':'Krishan'},axis='index')
+#14]
+print(Sales2)
+Sales2['2018']['Kokila']=100000
+print(Sales2)
+#15] 
+print(Sales)
+print(Sales2)
+</pre>
+
+<h4>lab 6</h4>
+<pre id="textToCopy6">
+# 2
+import pandas as pd
+Automobile_data =pd.read_csv("D:/Sem 3 B.Voc/Python for Data Science/notes/unit
+3/csv/AUTOMOBILE_DATA.csv", sep=",", header=0)
+Automobile_data 
+# 3
+import numpy as np
+import pandas as pd
+Automobile_data=pd.read_csv("D:/Sem 3 B.Voc/Python for Data Science/notes/unit
+3/csv/AUTOMOBILE_DATA.csv")
+Automobile_data['PRICE']=Automobile_data['PRICE'].fillna(420)
+Automobile_data
+# 4
+import pandas as pd
+Automobile_Data = pd.read_csv('D:/Sem 3 B.Voc/Python for Data Science/notes/unit
+3/csv/AUTOMOBILE_DATA1.csv')
+Automobile_Data = Automobile_Data
+[['COMPANY','PRICE']][Automobile_Data.PRICE==Automobile_Data['PRICE'].max()]
+Automobile_Data
+# 5
+import pandas as pd
+Automobile_Data = pd.read_csv('D:/Sem 3 B.Voc/Python for Data Science/notes/unit
+3/csv/AUTOMOBILE_DATA1.csv')
+car_Manufacturers = Automobile_Data .groupby('COMPANY')
+higpricecarDf = car_Manufacturers['COMPANY','PRICE'].max()
+higpricecarDf
+
+</pre>
+
+<h4>lab 7</h4>
+<pre id="textToCopy7">
+# a
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New
+folder/company_sales_data.csv")
+profitList = df ['total_profit'].tolist()
+monthList = df ['month_number'].tolist()
+plt.plot(monthList, profitList)
+plt.xlabel('Month number')
+plt.ylabel('Profit in dollar')
+plt.xticks(monthList)
+plt.title('Company profit per month')
+plt.yticks([100000, 200000, 300000, 400000, 500000])
+plt.show()
+
+# b
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New
+folder/company_sales_data.csv")
+monthList = df ['month_number'].tolist()
+faceCremSalesData = df ['facecream'].tolist()
+faceWashSalesData = df ['facewash'].tolist()
+toothPasteSalesData = df ['toothpaste'].tolist()
+bathingsoapSalesData = df ['bathingsoap'].tolist()
+shampooSalesData = df ['shampoo'].tolist()
+moisturizerSalesData = df ['moisturizer'].tolist()
+plt.plot(monthList, faceCremSalesData, label = 'Face cream Sales Data', marker='o',
+linewidth=3)
+plt.plot(monthList, faceWashSalesData, label = 'Face Wash Sales Data', marker='o',
+linewidth=3)
+plt.plot(monthList, toothPasteSalesData, label = 'ToothPaste Sales Data', marker='o',
+linewidth=3)
+plt.plot(monthList, bathingsoapSalesData, label = 'BathingSoap Sales Data', marker='o',
+linewidth=3)
+plt.plot(monthList, shampooSalesData, label = 'Shampoo Sales Data', marker='o',
+linewidth=3)
+plt.plot(monthList, moisturizerSalesData, label = 'Moisturizer Sales Data', marker='o',
+linewidth=3)
+plt.xlabel('Month Number')
+plt.ylabel('Sales units in number')
+plt.legend(loc='upper left')
+plt.xticks(monthList)
+plt.yticks([1000, 2000, 4000, 6000, 8000, 10000, 12000, 15000, 18000])
+plt.title('Sales data')
+plt.show()
+
+# c
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New
+folder/company_sales_data.csv")
+monthList = df ['month_number'].tolist()
+labels = ['FaceCream', 'FaseWash', 'ToothPaste', 'Bathing soap', 'Shampoo', 'Moisturizer']
+salesData = [df ['facecream'].sum(), df ['facewash'].sum(), df ['toothpaste'].sum(),
+df ['bathingsoap'].sum(), df ['shampoo'].sum(), df ['moisturizer'].sum()]
+plt.axis("equal")
+plt.pie(salesData, labels=labels, autopct='%1.1f%%')
+plt.legend(loc=(1,0.3))
+plt.title('Sales data')
+plt.show()
+ 
+</pre>
+
+<h4>lab 8</h4>
+<pre id="textToCopy8">
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+df1 = pd.read_csv("D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New
+folder/SAheart.csv")
+df1
+
+df1.head(10)
+
+df1=pd.crosstab(df1.famhist, df1.chd)
+df1
+
+# a
+df1.plot.bar()
+
+# b 
+df1 = pd.crosstab(df1.age, df1.chd)
+df1
+
+df1.plot.bar(figsize=(20,10))
+plt.xlabel("Ages")
+plt.ylabel("Counts")
+</pre>
+
+<h4>lab 9</h4>
+<pre id="textToCopy9">
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New
+folder/Iris.csv")
+df
+
+df.head(50)
+
+df[50:100]
+
+from pandas.api.types import is_numeric_dtype
+for col in data.columns:
+    if is_numeric_dtype(data[col]):
+            print('%s:' % (col))
+            print('\t Mean = %.2f' % data[col].mean())
+            print('\t Median = %.2f' % data[col].median())
+            print('\t Standard deviation = %.2f' % data[col].std())
+            print('\t Minimum = %.2f' % data[col].min())
+            print('\t Maximum = %.2f' % data[col].max())
+
+data['class'].value_counts()
+
+data.describe(include='all')
+
+# a
+df = "D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New folder/iris.data"
+iris = np.genfromtxt(df, delimiter=',', dtype='object')
+sepallength = np.genfromtxt(df, delimiter=',', dtype='float', usecols=[0])
+A = np.mean(sepallength)
+B = np.median(sepallength)
+C = np.std(sepallength)
+print("\n----Calculate Mean-----\n")
+print(A)
+print("\n---- Calculate Median ---- \n")
+print(B)
+print("\n---- Calculate Standard deviation ---- \n")
+print(C)
+
+# b
+df = "D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New folder/iris.data"
+sepallength = np.genfromtxt(df, delimiter=',', dtype='float', usecols=[0])
+Smax, Smin = sepallength.max(), sepallength.min()
+(sepallength - Smin)/(Smax - Smin)
+
+data.head(50)
+
+# c
+df ="D:/Sem 3 B.Voc/Python for Data Science/notes/unit 4/New folder/iris.data"
+iris_2d = np.genfromtxt(df, delimiter=',', dtype='float')
+iris_2d[np.random.randint(150, size=20), np.random.randint(4, size=20)] = np.nan
+print(iris_2d)
+
+type(iris_2d)
+
+X = np.isnan(iris_2d[:, 0]).sum()
+# Position of missing values
+Y = np.where(np.isnan(iris_2d[:, 0]))
+print("\n----Number of missing values ---- \n")
+print(X)
+print("\n---- Position of missing values ----\n")
+print(Y)
+
+
+</pre>
+
+<h4>lab 10</h4>
+<pre id="textToCopy10">
+import pandas as pd
+ResultSheet={
+'Arnab': pd.Series([45, 91, 97],
+index=['Maths','Science','Hindi']),
+'Ramit': pd.Series([70, 81, 96],
+index=['Maths','Science','Hindi']),
+'Samridhi': pd.Series([89, 91, 88],
+index=['Maths','Science','Hindi']),
+'Riya': pd.Series([81, 71, 67],
+index=['Maths','Science','Hindi']),
+'Mallika': pd.Series([94, 95, 99],
+index=['Maths','Science','Hindi']),
+'Shiv': pd.Series([25, 50, 75],
+index=['Maths','Science','Hindi'])}
+ResultDF = pd.DataFrame(ResultSheet)
+ResultDF
+
+# 1
+ResultDF.to_csv(path_or_buf='C:/Users/shivaraj/Desktop/Dataset/Student_Result.CSV', sep
+=',')
+
+# 2
+Maker ="*"
+markersize=10
+linestyle="--"
+Linewidth =3
+import pandas as pd
+import matplotlib.pyplot as plt
+df = ResultDF
+#creates plot of different color for each student
+df.plot(kind='line', color=['red','blue','brown','y','m','c'],marker="*",markersize=10,linewidth=
+3,linestyle="--")
+# Set title to "Unit Test Report"
+plt.title('Unit Test Report')
+plt.grid(True)
+# Label x axis as "Subjects"
+plt.xlabel('Subjects')
+# Label y axis as "Marks in Rs"
+plt.ylabel('Marks')
+plt.show()
+
+# 3
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.read_csv("C:/Users/shivaraj/Desktop/Dataset/Student_Result.CSV")
+df.plot(kind='bar',title='Student_Result',color=['b','r','k','y','c','black'], edgecolor='m',linewidth
+=2,linestyle='-.')
+positions = (0, 1, 2)
+labels = ("Maths", "Science", "Hindi")
+plt.xticks(positions, labels)
+# Label x axis as "Subjects"
+plt.xlabel('Subjects')
+plt.legend(loc=(1,0.4))
+#set title for ylabel
+plt.ylabel('Marks in Each Subject')
+plt.show()
+
+ResultDF
+
+# 4
+import numpy as np
+import matplotlib.pyplot as plt
+Marks = np.array([45,70,89,81,94,25])
+StuName = np.array(['Arnab', 'Ramit','Samridhi','Riya','Mallika','Shiv'])
+plt.scatter(x=Marks,y=StuName,s=500,color='red',linewidth=3,marker='*',edgecolor='blue')
+plt.title('All Students Marks in Maths')
+plt.xlabel('Marks Scored')
+plt.ylabel('Students Name')
+plt.show()
+
+Marks = np.array([91,81,91,71,95,50])
+StuName = np.array(['Arnab', 'Ramit','Samridhi','Riya','Mallika','Shiv'])
+plt.scatter(x=Marks,y=StuName,s=500,color='red',linewidth=3,marker='*',edgecolor='blue')
+plt.title('All Students Marks in Science')
+plt.xlabel('Marks Scored')
+plt.ylabel('Students Name')
+plt.show()
+
+Marks = np.array([97,96,88,67,99,75])
+StuName = np.array(['Arnab', 'Ramit','Samridhi','Riya','Mallika','Shiv'])
+plt.scatter(x=Marks,y=StuName,s=500,color='red',linewidth=3,marker='*',edgecolor='blue')
+plt.title('All Students Marks in Hindi')
+plt.xlabel('Marks Scored')
+plt.ylabel('Students Name')
+plt.show()
+
+</pre>
+              <script src="script.js"></script>
+        
+</body>
+</html>

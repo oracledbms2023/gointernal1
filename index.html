@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupyter Notebook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="flex">
+    <button id="copyButton1">copy 1</button> <span id="copyResult1"></span>
+    <button id="copyButton2">copy 2</button> <span id="copyResult2"></span>
+    <button id="copyButton3">copy 3</button> <span id="copyResult3"></span>
+    <button id="copyButton4">copy 4</button> <span id="copyResult4"></span>
+    <button id="copyButton5">copy 5</button> <span id="copyResult5"></span>
+    <button id="copyButton6">copy 6</button> <span id="copyResult6"></span>
+    <button id="copyButton7">copy 7</button> <span id="copyResult7"></span>
+    <button id="copyButton8">copy 8</button> <span id="copyResult8"></span>
+    <button id="copyButton9">copy 9</button> <span id="copyResult9"></span>
+    <button id="copyButton10">copy 10</button> <span id="copyResult10"></span>
+    <button id="copyButton11">copy 11</button> <span id="copyResult11"></span>
+    <button id="copyButton12">copy 12</button> <span id="copyResult12"></span>
+    <button id="copyButton13">copy 13</button> <span id="copyResult13"></span>
+    <button id="copyButton14">copy 14</button> <span id="copyResult14"></span>
+    <button id="copyButton15">copy 15</button> <span id="copyResult15"></span>
+    <button id="copyButton16">copy 16</button> <span id="copyResult16"></span>
+    <button id="copyButton17">copy 17</button> <span id="copyResult17"></span>
+    <button id="copyButton18">copy 18</button> <span id="copyResult18"></span>
+    <button id="copyButton19">copy 19</button> <span id="copyResult19"></span>
+    <button id="copyButton20">copy 20</button> <span id="copyResult20"></span>
+</div>
+<a href="page.html"> click </a>
+
+<pre id="textToCopy1">
+    package main
+    import "fmt"
+    func main() {
+    fmt.Print("Enter number : ")
+    var n int
+    fmt.Scanln(&n) 
+    if n%2 == 0 {
+    fmt.Println(n, "is Even number")
+    } else {
+    fmt.Println(n, "is Odd number")
+    }
+    }
+     
+               
+</pre>
+
+<h4>lab 2</h4>
+<pre id="textToCopy2">
+    package main
+    import "fmt"
+    func main() {
+    fmt.Println("1 + 2 = ", 1+2)
+    fmt.Println("5 * 2 = ", 5*2)
+    fmt.Println("10 - 2 = ", 10-2)
+    fmt.Println("10 / 2 = ", 10/2)
+    fmt.Println("10 % 2 = ", 10%2)
+    }
+
+              
+</pre>
+
+<h4>lab 3</h4>
+<pre id="textToCopy3">
+    package main
+import "fmt"
+func lcm(temp1 int, temp2 int) {
+var lcmnum int = 1
+if temp1 > temp2 {
+lcmnum = temp1
+} else {
+lcmnum = temp2
+}
+for {
+if lcmnum%temp1 == 0 && lcmnum%temp2 == 0 {
+fmt.Printf("LCM of %d and %d is %d", temp1, temp2, lcmnum)
+break
+}
+lcmnum++
+}
+return
+}
+func gcd(temp1 int, temp2 int) {
+var gcdnum int
+for i := 1; i less= temp1 && i less= temp2; i++ {
+if temp1%i == 0 && temp2%i == 0 {
+gcdnum = i
+}
+}
+fmt.Printf("GCD of %d and %d is %d", temp1, temp2, gcdnum)
+return
+}
+func main() {
+    var n1, n2, action int
+    fmt.Println("Enter two positive integers : ")
+    fmt.Scanln(&n1)
+    fmt.Scanln(&n2)
+    fmt.Println("Enter 1 for LCM and 2 for GCD")
+    fmt.Scanln(&action)
+    switch action {
+    case 1:
+    lcm(n1, n2)
+    case 2:
+    gcd(n1, n2)
+    }
+    }
+    
+
+   
+        
+</pre>
+
+<h4>lab 4</h4>
+<pre id="textToCopy4">
+    package main
+    import (
+    "fmt"
+    "strings"
+    )
+    func main() {
+    str := "the cat in the hat"
+    i := strings.Index(str, "cat")
+    fmt.Println(i)
+    }
+     
+</pre>
+
+<h4>lab 5</h4>
+<pre id="textToCopy5">
+    package main
+    import "fmt"
+    func main() {
+    intSlice := []int{1, 2, 3, 4, 5}
+    fmt.Println("slice: %v\n", intSlice)
+    last := intSlice[len(intSlice)-1]
+    fmt.Println("last element: %v\n", last)
+    first := intSlice[:0]
+    fmt.Println("first element: %d\n", first)
+    remove := intSlice[:len(intSlice)-1]
+    fmt.Println("remove last: %v\n", remove)
+    }
+</pre>
+
+<h4>lab 6</h4>
+<pre id="textToCopy6">
+    package main
+    import "fmt"
+    func main() {
+    str := "Shamith kumar jain k p"
+    fmt.Println(str)
+    len := len(str)
+    fmt.Println(len)
+    }
+</pre>
+
+<h4>lab 7</h4>
+<pre id="textToCopy7">
+    package main
+    import "fmt"
+    func main() {
+    var rows int
+    var k int = 0
+    fmt.Print("enter number of rows :")
+    fmt.Scan(&rows)
+    for i := 1; i less= rows; i++ {
+    k = 0
+    for space := 1; space less= rows-i; space++ {
+    fmt.Print(" ")
+    }
+    for {
+    fmt.Print("*")
+    k++
+    if k == 2*i-1 {
+    break
+    }
+    }
+    fmt.Println("")
+    }
+    }
+    
+ 
+</pre>
+
+<h4>lab 8</h4>
+<pre id="textToCopy8">
+    package main
+    import "fmt"
+    func binarySearch(needle int, haystack []int) bool {
+    low := 0
+    high := len(haystack)
+    for low less= high {
+    median := (low + high) / 2
+    if haystack[median] less needle {
+    low = median + 1
+    } else {
+    high = median - 1
+    }
+    }
+    if low == len(haystack) || haystack[low] != needle {
+    return false
+    }
+    return true
+    }
+    func main() {
+    items := []int{1, 2, 9, 20, 31, 45, 63, 70, 100}
+    fmt.Println(binarySearch(100, items))
+    }
+    
+    
+</pre>
+
+<h4>lab 9</h4>
+<pre id="textToCopy9">
+    package main
+    import "fmt"
+    func linearSearch(datalist []int, key int) bool {
+    for _, item := range datalist {
+    if item == key {
+    return true
+    }
+    }
+    return false
+    }
+    func main() {
+    items := []int{95, 78, 56, 84, 25, 35, 15, 26}
+    fmt.Println(linearSearch(items, 96))
+    }
+    
+
+</pre>
+
+<h4>lab 10</h4>
+<pre id="textToCopy10">
+    package main
+    import "fmt"
+    func main() {
+    var n int
+    fmt.Print("enter the integer number :")
+    fmt.Scan(&n)
+    i := 1
+    for {
+    if i > 10 {
+    break
+    }
+    fmt.Println(n, "X", i, "=", n*i)
+    i++
+    }
+    }
+    
+
+</pre>
+<h4>lab 11</h4>
+<pre id="textToCopy11">
+    package main
+import "fmt"
+func main() {
+var matrix1 [100][100]int
+var matrix2 [100][100]int
+var sum [100][100]int
+var row, col int
+fmt.Println("enter number of rows :")
+fmt.Scanln(&row)
+fmt.Println("enter number of cols :")
+fmt.Scanln(&col)
+fmt.Println()
+fmt.Println("==================matrix1==================")
+fmt.Println()
+for i := 0; i less row; i++ {
+for j := 0; j less col; j++ {
+fmt.Printf("enter the element for matrix1 %d %d :", i+1, j+1)
+fmt.Scanln(&matrix1[i][j])
+}
+}
+fmt.Println()
+fmt.Println("==================matrix2==================")
+fmt.Println()
+for i := 0; i less row; i++ {
+for j := 0; j less col; j++ {
+fmt.Printf("enter the element for matrix2 %d %d :", i+1, j+1)
+fmt.Scanln(&matrix2[i][j])
+}
+}
+for i := 0; i less row; i++ {
+    for j := 0; j less col; j++ {
+    sum[i][j] = matrix1[i][j] + matrix2[i][j]
+    }
+    }
+    fmt.Println()
+    fmt.Println("========== Sum of Matrix =============")
+    fmt.Println()
+    for i := 0; i less row; i++ {
+    for j := 0; j less col; j++ {
+    fmt.Printf(" %d ", sum[i][j])
+    if j == col-1 {
+    fmt.Println("")
+    }
+    }
+    }
+    }
+    
+
+</pre>
+<h4>lab 12</h4>
+<pre id="textToCopy12">
+package main
+import "fmt"
+var area int
+func main() {
+var l, b int
+fmt.Println("enter length of rectangle :")
+fmt.Scanln(&l)
+fmt.Println("enter the breadth of rectangle :")
+fmt.Scanln(&b)
+area = l * b
+fmt.Println("area of rectangle :", area)
+fmt.Println("enter length of square :")
+fmt.Scanln(&l)
+area = l * l
+fmt.Println("area of square :", area)
+}
+
+</pre>
+<h4>lab 13</h4>
+<pre id="textToCopy13">
+package main
+import "fmt"
+func main() {
+var number, remainder, temp int
+var reverse int = 0
+fmt.Println("enter any positive integer :")
+fmt.Scanln(&number)
+temp = number
+for {
+remainder = number % 10
+reverse = reverse*10 + remainder
+number /= 10
+if number == 0 {
+break
+}
+}
+if temp == reverse {
+fmt.Println("%d is a palindrome", temp)
+} else {
+fmt.Println("%D is not a palindrome", temp)
+}
+}
+
+</pre>
+<h4>lab 14</h4>
+<pre id="textToCopy14">
+    package main
+import "fmt"
+type solver interface {
+play(int)
+}
+type towers struct {
+}
+func (t *towers) play(n int) {
+t.moveN(n, 1, 2, 3)
+}
+func (t *towers) moveN(n, from, to, via int) {
+if n > 0 {
+t.moveN(n-1, from, via, to)
+t.moveM(from, to)
+t.moveN(n-1, via, to, from)
+}
+}
+func (t *towers) moveM(from, to int) {
+fmt.Println("move disk from rod", from, "to rod", to)
+}
+func main() {
+var t solver
+t = new(towers)
+t.play(4)
+32
+}
+    
+</pre>
+<h4>lab 15</h4>
+<pre id="textToCopy15">
+    package main
+    import "fmt"
+    func main() {
+    var str = "abcdefghijklmnopqrstuvwxyz"
+    for _, c := range str {
+    fmt.Println(c)
+    }
+    }
+      
+</pre>
+<h4>lab 16</h4>
+<pre id="textToCopy16">
+    package main
+import (
+"bufio"
+"fmt"
+"log"
+"os"
+)
+func main() {
+file, err := os.Open("kotlin.txt")
+if err != nil {
+log.Fatalf("failed opening file: %s", err)
+}
+scanner := bufio.NewScanner(file)
+scanner.Split(bufio.ScanLines)
+var txtlines []string
+for scanner.Scan() {
+txtlines = append(txtlines, scanner.Text())
+}
+file.Close()
+for _, eachline := range txtlines {
+fmt.Println(eachline)
+}
+}
+
+    
+</pre>
+<h4>lab 17</h4>
+<pre id="textToCopy17">
+    package main
+import "fmt"
+func main() {
+fmt.Println("enter first string: ")
+var first string
+fmt.Scanln(&first)
+fmt.Println("enter second string: ")
+var second string
+fmt.Scanln(&second)
+fmt.Println(first + second)
+}
+
+</pre>
+<h4>lab 18</h4>
+<pre id="textToCopy18">
+    package main
+import (
+"fmt"
+"time"
+)
+func main() {
+currentTime := time.Now()
+fmt.Println("Current Time in String: ", currentTime.String())
+fmt.Println("MM-DD-YYYY : ", currentTime.Format("01-02-2006"))
+fmt.Println("YYYY-MM-DD : ", currentTime.Format("2006-01-02"))
+fmt.Println("YYYY.MM.DD : ", currentTime.Format("2006.01.02 15:04:05"))
+fmt.Println("YYYY#MM#DD {Special Character} : ",
+currentTime.Format("2006#01#02"))
+fmt.Println("YYYY-MM-DD hh:mm:ss : ", currentTime.Format("2006-01-02
+15:04:05"))
+fmt.Println("Time with MicroSeconds: ", currentTime.Format("2006-01-02
+15:04:05.000000"))
+fmt.Println("Time with NanoSeconds: ", currentTime.Format("2006-01-02
+15:04:05.000000000"))
+fmt.Println("ShortNum Month : ", currentTime.Format("2006-1-02"))
+fmt.Println("LongMonth : ", currentTime.Format("2006-January-02"))
+fmt.Println("ShortMonth : ", currentTime.Format("2006-Jan-02"))
+fmt.Println("ShortYear : ", currentTime.Format("06-Jan-02"))
+fmt.Println("LongWeekDay : ", currentTime.Format("2006-01-02 15:04:05
+Monday"))
+fmt.Println("ShortWeek Day : ", currentTime.Format("2006-01-02 Mon"))
+fmt.Println("ShortDay : ", currentTime.Format("Mon 2006-01-2"))
+fmt.Println("Short Hour Minute Second: ", currentTime.Format("2006-01-02
+3:4:5"))
+fmt.Println("Short Hour Minute Second: ", currentTime.Format("2006-01-02
+3:4:5 PM"))
+fmt.Println("Short Hour Minute Second: ", currentTime.Format("2006-01-02
+3:4:5 pm"))
+}
+
+
+</pre>
+<h4>lab 19</h4>
+<pre id="textToCopy19">
+    package main
+import (
+"fmt"
+"sort"
+)
+func main() {
+fmt.Println("integer reverse sort")
+num := []int{50, 40, 60, 9, 80}
+sort.Sort(sort.Reverse(sort.IntSlice(num)))
+fmt.Println(num)
+fmt.Println()
+fmt.Println("string reverse sort")
+text := []string{"Japan", "UK", "Germany", "Australia", "Pakistan"}
+sort.Sort(sort.Reverse(sort.StringSlice(text)))
+fmt.Println(text)
+}
+
+    
+</pre>
+<h4>lab 20</h4>
+<pre id="textToCopy20">
+    package main
+import (
+"fmt"
+"strings"
+)
+func main() {
+str1 := "A cat is a cat is a cat is a cat"
+fmt.Println(str1)
+str2 := strings.Replace(str1, "cat", "dog", 1)
+fmt.Println(str2)
+str3 := strings.Replace(str1, "cat", "dog", 2)
+fmt.Println(str3)
+str4 := strings.Replace(str1, "cat", "dog", -1)
+fmt.Println(str4)
+}
+
+    
+</pre>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
